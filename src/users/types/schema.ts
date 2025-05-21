@@ -11,6 +11,9 @@ export const schema = z.object({
     }), // testam cu regex ul si returnam true sau false
 
   states: z.array(z.string()).min(1).max(2),
+  languagesSpoken: z.array(z.string()),
+  gender: z.string().min(1),
+  skills: z.array(z.string()).min(1),
 });
 
 export type Schema = z.infer<typeof schema>;
@@ -19,4 +22,7 @@ export const defaultValues: Schema = {
   email: "",
   name: "",
   states: [],
+  languagesSpoken: [],
+  gender: "",
+  skills: [],
 };
