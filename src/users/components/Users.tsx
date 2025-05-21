@@ -22,7 +22,16 @@ function Users() {
         error={!!errors.email}
         helperText={errors.email?.message}
       />
-      <RHFAutocomplete<Schema> name="states" />
+      <RHFAutocomplete<Schema>
+        name="states"
+        label="States"
+        options={[
+          { id: "1", label: "Califonia" },
+          { id: "2", label: "Texas" },
+          { id: "3", label: "Seattle" },
+          { id: "4", label: "New Orlens" },
+        ]}
+      />
     </Stack>
   );
 }
